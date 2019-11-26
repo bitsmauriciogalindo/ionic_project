@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary" menu="mainMenu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Mis libros
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let book of books">
+    <ion-item [routerLink]="['/bookdetails', book.id]">
+      <ion-thumbnail class="thumb-img-list">
+        <ion-img class="img-list" [src]="book.imageUrl"></ion-img>
+      </ion-thumbnail>
+      <ion-label class="title-list ion-text-wrap">{{ book.title }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/addbook">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

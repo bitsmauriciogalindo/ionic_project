@@ -1,3 +1,4 @@
+import { TaskService } from './services/task.service';
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';

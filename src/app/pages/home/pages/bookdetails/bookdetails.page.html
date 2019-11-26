@@ -1,0 +1,28 @@
+<app-topbar titulo="Detalles"></app-topbar>
+
+<ion-content class="book-detail">
+    <ion-row class="ion-justify-content-center">
+      <ion-img src="{{ book.imageUrl }}"></ion-img>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h3 class="ion-text-center">{{ book.title }}</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <div class="rating" *ngFor="let i of rating(book.rating).fill(1)">
+        <ion-icon name="star"></ion-icon>
+      </div>
+    </ion-row>
+    <ion-row>
+      <div class="summary ion-text-justify">
+        <ion-note>
+            {{ book.summary }}
+        </ion-note>
+      </div>
+    </ion-row>
+    <ion-row class="details ion-text-center">
+      <ion-col><ion-icon name="person"></ion-icon>{{ book.author }}</ion-col>
+      <ion-col><ion-icon name="book"></ion-icon>{{ book.editorial }}</ion-col>
+    </ion-row>
+</ion-content>

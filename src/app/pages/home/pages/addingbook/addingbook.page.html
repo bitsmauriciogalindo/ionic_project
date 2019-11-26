@@ -1,0 +1,36 @@
+<app-topbar titulo="Agrega un libro"></app-topbar>
+
+
+<ion-content>
+    <form (ngSubmit)="createBook(book)">
+        <ion-item>
+            <ion-label position="stacked">Título del libro</ion-label>
+            <ion-input type="text" [(ngModel)]="book.title" name="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Resumen</ion-label>
+          <ion-textarea [(ngModel)]="book.summary" name="summary" rows="6" cols="20"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Autor</ion-label>
+          <ion-input type="text" [(ngModel)]="book.author" name="author"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Editorial</ion-label>
+          <ion-input type="text" [(ngModel)]="book.editorial" name="editorial"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Calificación (1-5)</ion-label>
+          <ion-input type="number" [(ngModel)]="book.rating" name="rating"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">URL de la la portada</ion-label>
+          <ion-input type="text" [(ngModel)]="book.imageUrl" name="imageUrl"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Categoria</ion-label>
+          <ion-input type="text" [(ngModel)]="book.category" name="category"></ion-input>
+        </ion-item>
+        <ion-button type="submit" block>Agregar</ion-button>
+    </form>
+</ion-content>

@@ -1,0 +1,22 @@
+<app-topbar titulo="mi cuenta"></app-topbar>
+
+<ion-content>
+    <ion-avatar (click)="takePhoto()">
+        <img [src]="defaultImage" alt="photo" *ngIf="!photo">
+        <img [src]="photo" alt="photo" *ngIf="photo">
+    </ion-avatar>
+    <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Lectura favorita</ion-label>
+        <ion-select placeholder="- Genero favorito-" [(ngModel)]="genero">
+            <ion-select-option value="terror">Terror</ion-select-option>
+            <ion-select-option value="fantasia">Fantasia</ion-select-option>
+            <ion-select-option value="infantil">Infantil</ion-select-option>
+            <ion-select-option value="romance">Romance</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-button (click)="saveProfile()" class="ion-content-justify-center">Guardar</ion-button>
+</ion-content>
