@@ -1,4 +1,4 @@
-# Ionic project - Bitsblioteca
+# Ionic project - Mi Bitsblioteca
 
 This is a simple example of a ionic project with Angular, using a REST API for getting data [GET] & and send data using [POST] to the REST API. 
 The project use capacitor for access to camera of device.
